@@ -88,7 +88,7 @@ Open the HTTPS address printed by the application and add /swagger. The developm
 
 ## Authentication
 
-Register using POST /api/authentication/register. Supply a full name, email, password, phone number, date of birth, role and optional username. Passwords are stored as hashes, not plain text.
+Register using POST /api/authentication/register. Supply a full name, email, password, phone number, date of birth, role and optional username. Passwords are stored as hashes not plain text.
 
 Log in using POST /api/authentication/login with the registered email and password. A successful login creates a session and returns a cookie; send that cookie with protected requests. POST /api/authentication/logout clears the session. Requests without a valid session are unauthorised; requests made with the wrong role are forbidden.
 
@@ -96,13 +96,13 @@ Example registration body:
 
 ~~~json
 {
-  "fullName": "Demo Organiser",
-  "email": "organiser@example.com",
+  "fullName": "Siyahluma",
+  "email": "siyahlumahoyi@gmail.com",
   "password": "Use-A-Strong-Password-123!",
   "phoneNumber": "0712345678",
   "dateOfBirth": "1990-01-01",
   "role": "Organiser",
-  "username": "demoorganiser"
+  "username": "siya20"
 }
 ~~~
 
