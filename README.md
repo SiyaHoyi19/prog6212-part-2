@@ -8,15 +8,15 @@ RaceDay is an API for organising community running, walking and cycling events. 
 
 ### Organiser
 
-Organisers can manage their own events and categories, view enrolments for events they own, update enrolment status, and record and view results for their events.
+Organiser's can manage their own events and categories, view enrolments for events they own, update enrolment status and record and view results for their events.
 
 ### Participant
 
-Participants can browse events and categories, enrol by selecting a category, view their own enrolments and results, and view or update their own profile. Registration accepts only Organiser or Participant. The API checks roles and ownership for restricted operations.
+Participants can browse events and categories, enrol by selecting a category, view their own enrolments and results and view or update their own profile. Registration accepts only Organiser or Participant. The API checks roles and ownership for restricted operations.
 
 ## Part 1
 
-Part 1 contains the planning artefacts, including the ERD, database design and API endpoint plan. They are retained in the docs/ folder. Part 2 implements the API and database using C# models and EF Core migrations.
+Part 1 contains the planning which includes the ERD, database design and API endpoint plan. They are found in the Docsocs folder. Part 2 implements the API and database using C# models and EF Core migrations.
 
 ## Part 2
 
@@ -32,7 +32,6 @@ Part 2 implements the RaceDay REST API. Its main entities are Role, AppUser, Eve
 
 ## Project Structure
 
-~~~text
 RaceDay.Api/                    Solution root
 ├── RaceDay.sln
 ├── RaceDay.Api/                 ASP.NET Core API
