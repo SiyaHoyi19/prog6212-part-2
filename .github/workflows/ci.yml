@@ -1,4 +1,4 @@
-name: RaceDay CI
+name: RaceDay.Api
 
 on:
   push:
