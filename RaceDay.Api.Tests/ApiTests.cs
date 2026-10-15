@@ -11,6 +11,9 @@ using Xunit;
 
 public class ApiFactory : WebApplicationFactory<Program>
 {
+    // Keep one database name for this factory so data persists between requests.
+    private readonly string _databaseName = "RaceDayTests_" + Guid.NewGuid();
+
     protected override void ConfigureWebHost(IWebHostBuilder builder)
     {
         builder.UseEnvironment("Development");
@@ -18,7 +21,8 @@ public class ApiFactory : WebApplicationFactory<Program>
         builder.ConfigureServices(services =>
         {
             var descriptor = services.SingleOrDefault(
-                service => service.ServiceType == typeof(DbContextOptions<RaceDayDbContext>));
+                service =>
+                    service.ServiceType == typeof(DbContextOptions<RaceDayDbContext>));
 
             if (descriptor is not null)
             {
@@ -26,7 +30,7 @@ public class ApiFactory : WebApplicationFactory<Program>
             }
 
             services.AddDbContext<RaceDayDbContext>(options =>
-                options.UseInMemoryDatabase("RaceDayTests_" + Guid.NewGuid()));
+                options.UseInMemoryDatabase(_databaseName));
         });
     }
 }
