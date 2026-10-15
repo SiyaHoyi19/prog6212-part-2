@@ -156,9 +156,8 @@ The workflow at .github/workflows/ci.yml is configured to restore, build and tes
 
 After a successful workflow run, add a genuine screenshot at docs/ci-green-build.png. The following Markdown displays it:
 
-~~~markdown
-![Successful GitHub Actions build](docs/ci-green-build.png)
-~~~
+<img width="1912" height="901" alt="Screenshot 2026-10-15 194136" src="https://github.com/user-attachments/assets/cfe24567-9876-4c5b-8ec2-5869bc4e9c01" />
+
 
 This section does not claim a green build until you add your own screenshot.
 
